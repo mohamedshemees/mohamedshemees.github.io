@@ -37,14 +37,18 @@ a:hover {
 }
 
 .app-image, .app-gif {
-  width: 240px;
+  width: 100%;
+  max-width: 600px;
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(255, 0, 200, 0.3);
-  margin: 0.5rem;
-  transition: transform 0.3s ease;
+  margin: 1.5rem auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .app-image:hover, .app-gif:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(255, 0, 200, 0.4);
 }
 
 .project-info {

@@ -5,7 +5,7 @@ Welcome to my portfolio! I create Android and web apps with a focus on design, p
 
 ## 🌦️ Weather App
 <div class="project">
-  <div class="mockup">
+  <div class="app-gallery">
     <img src="assets/weather_app.png" alt="Weather App Screenshot" class="app-image">
     <img src="assets/weather_demo.gif" alt="Weather App Demo" class="app-gif">
   </div>

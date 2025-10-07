@@ -19,9 +19,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Outer project card */
 .project {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
   margin: 2rem 0;
@@ -31,31 +33,29 @@ a:hover {
   box-shadow: 0 0 40px rgba(255, 0, 200, 0.1);
 }
 
-.mockup {
+/* Info on left */
+.project-info {
   flex: 1 1 300px;
-  text-align: center;
+  max-width: 400px;
 }
+
+/* Gallery on right */
 .app-gallery {
+  flex: 1 1 600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin: 2rem 0;
 }
 
+/* Image styling */
 .app-image, .app-gif {
-  width: 100%;
-  max-width: 800px; 
+  flex: 1 1 45%;
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(255, 0, 200, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-@media (min-width: 768px) {
-  .app-image, .app-gif {
-    flex: 1 1 45%;
-  }
+  max-width: 100%;
+  height: auto;
 }
 
 .app-image:hover, .app-gif:hover {
@@ -63,7 +63,14 @@ a:hover {
   box-shadow: 0 12px 40px rgba(255, 0, 200, 0.4);
 }
 
-.project-info {
-  flex: 1 1 300px;
-  max-width: 400px;
+/* Stack vertically on mobile */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app-gallery {
+    flex-direction: column;
+  }
 }

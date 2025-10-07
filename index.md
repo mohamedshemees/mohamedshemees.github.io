@@ -11,7 +11,10 @@ Welcome to my portfolio! I create Android and web apps with a focus on design, p
 
   <div class="app-gallery">
     <img src="assets/weather_app.png" alt="Weather App Screenshot" class="app-image">
-    <img src="assets/weather_demo.webm" alt="Weather App Demo" class="app-gif">
+    <video class="app-gif" autoplay loop muted playsinline>
+    <source src="assets/weather_demo.webm" type="video/webm">
+    Your browser does not support the video tag.
+    </video>
   </div>
 
 <link rel="stylesheet" href="assets/css/style.css">

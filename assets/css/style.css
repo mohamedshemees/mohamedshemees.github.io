@@ -1,0 +1,112 @@
+/* ---------- Base ------------ */
+body {
+  background: radial-gradient(circle at 20% 30%, #2a0044 0%, #0e001a 60%, #050009 100%);
+  color: #eee;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: #ff4efc;
+}
+
+a {
+  color: #ff93f7;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Shared layout ---------- */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+/* Images & videos layout */
+.app-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.app-image,
+.app-gif {
+  width: 460px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.app-image:hover,
+.app-gif:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ---------- Weather App ---------- */
+.project-weather {
+  background: rgba(25, 0, 45, 0.85);
+  color: #eee;
+  box-shadow: 0 0 50px rgba(255, 0, 200, 0.25);
+}
+
+.project-weather h3 {
+  color: #ff4efc;
+}
+
+.project-weather a {
+  color: #ff93f7;
+}
+.project-weather a:hover {
+  color: #ffb6ff;
+}
+
+.project-weather .app-image,
+.project-weather .app-gif {
+  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.28);
+}
+
+/* ---------- Calculator & Currency (off-white orange theme) ---------- */
+.project-calculator,
+.project-currency {
+  background: linear-gradient(135deg, #f1ede6 0%, #ffebc9 100%);
+  color: #2a1f0d;
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.15);
+}
+
+.project-calculator h3,
+.project-currency h3 {
+  color: #ff9800;
+}
+
+.project-calculator a,
+.project-currency a {
+  color: #ff8c00;
+}
+
+.project-calculator a:hover,
+.project-currency a:hover {
+  color: #ff6200;
+}
+
+.project-calculator .app-image,
+.project-currency .app-image,
+.project-calculator .app-gif,
+.project-currency .app-gif {
+  box-shadow: 0 10px 30px rgba(255, 150, 0, 0.25);
+}

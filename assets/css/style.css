@@ -35,15 +35,27 @@ a:hover {
   flex: 1 1 300px;
   text-align: center;
 }
+.app-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
 
 .app-image, .app-gif {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; 
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(255, 0, 200, 0.3);
-  margin: 1.5rem auto;
-  display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media (min-width: 768px) {
+  .app-image, .app-gif {
+    flex: 1 1 45%;
+  }
 }
 
 .app-image:hover, .app-gif:hover {

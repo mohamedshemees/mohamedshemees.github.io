@@ -11,7 +11,7 @@ Welcome to my portfolio! I create Android and web apps with a focus on design, p
 
   <div class="app-gallery">
     <img src="assets/weather_app.png" alt="Weather App Screenshot" class="app-image">
-    <img src="assets/weather_demo.gif" alt="Weather App Demo" class="app-gif">
+    <img src="assets/weather_demo.webm" alt="Weather App Demo" class="app-gif">
   </div>
 
 <link rel="stylesheet" href="assets/css/style.css">

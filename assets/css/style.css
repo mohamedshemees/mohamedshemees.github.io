@@ -36,27 +36,27 @@ a:hover {
   flex: 1 1 300px;
   max-width: 400px;
 }
-
 .app-gallery {
   flex: 1 1 600px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
 }
 
-.app-image, .app-gif {
-  width: auto;
-  max-width: 350px;
+.app-image,
+.app-gif {
+  flex: 1 1 45%; 
+  max-width: 500px; 
+  width: 100%;
   height: auto;
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(255, 0, 200, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: contain; 
-}
+  object-fit: cover;
 
-.app-image:hover, .app-gif:hover {
+.app-image:hover,
+.app-gif:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 40px rgba(255, 0, 200, 0.4);
 }
@@ -66,7 +66,9 @@ a:hover {
     flex-direction: column;
   }
 
-  .app-image, .app-gif {
+  .app-image,
+  .app-gif {
+    flex: none;
     max-width: 90%;
   }
 }

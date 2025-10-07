@@ -1,10 +1,12 @@
+/* ---------- Base ------------ */
 body {
-  background: #0e001a;
+  background: radial-gradient(circle at 20% 30%, #2a0044 0%, #0e001a 60%, #050009 100%);
   color: #eee;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -19,106 +21,92 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ---------- Shared layout ---------- */
 .project {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 1.5rem;
+  margin: 2.5rem auto;
   padding: 2rem;
   border-radius: 1rem;
-  background: radial-gradient(circle at top left, #2b0045, #110017);
-  box-shadow: 0 0 40px rgba(255, 0, 200, 0.1);
+  max-width: 1100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
-.project-info {
-  flex: 1 1 300px;
-  max-width: 400px;
-}
+/* Images & videos layout */
 .app-gallery {
-  flex: 1 1 600px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .app-image,
 .app-gif {
-  flex: 1 1 45%; 
-  max-width: 500px; 
-  width: 100%;
+  width: 460px;
   height: auto;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: cover;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
 .app-image:hover,
 .app-gif:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(255, 0, 200, 0.4);
+  transform: translateY(-6px) scale(1.02);
 }
 
-@media (max-width: 768px) {
-  .app-gallery {
-    flex-direction: column;
-  }
-
-  .app-image,
-  .app-gif {
-    flex: none;
-    max-width: 90%;
-  }
-}
-.project-calculator {
-  background: linear-gradient(135deg, #ffffff, #fdf1e6);
-  box-shadow: 0 0 40px rgba(255, 140, 0, 0.2);
-  color: #222;
+/* ---------- Weather App ---------- */
+.project-weather {
+  background: rgba(25, 0, 45, 0.85);
+  color: #eee;
+  box-shadow: 0 0 50px rgba(255, 0, 200, 0.25);
 }
 
-.project-calculator h3 {
-  color: #ff8c00;
+.project-weather h3 {
+  color: #ff4efc;
 }
 
-.project-calculator a {
-  color: #ff6f00;
+.project-weather a {
+  color: #ff93f7;
+}
+.project-weather a:hover {
+  color: #ffb6ff;
 }
 
-.project-calculator a:hover {
-  text-decoration: underline;
-  color: #ff4500;
+.project-weather .app-image,
+.project-weather .app-gif {
+  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.28);
 }
 
-.project-calculator .app-image,
-.project-calculator .app-gif {
-  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+/* ---------- Calculator & Currency (off-white orange theme) ---------- */
+.project-calculator,
+.project-currency {
+  background: linear-gradient(135deg, #f1ede6 0%, #ffebc9 100%);
+  color: #2a1f0d;
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.15);
 }
 
-.project-calculator .app-image:hover,
-.project-calculator .app-gif:hover {
-  box-shadow: 0 12px 40px rgba(255, 140, 0, 0.5);
-}
-.currency-theme {
-  background: linear-gradient(135deg, #ffffff 0%, #ffa726 100%);
-  color: #333;
-}
-
-.currency-theme .section-title {
+.project-calculator h3,
+.project-currency h3 {
   color: #ff9800;
 }
 
-.currency-theme .app-image,
-.currency-theme .app-gif {
-  width: 300px;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(255, 152, 0, 0.4);
-  margin: 0.75rem;
-  transition: transform 0.3s ease;
+.project-calculator a,
+.project-currency a {
+  color: #ff8c00;
 }
 
-.currency-theme .app-image:hover,
-.currency-theme .app-gif:hover {
-  transform: translateY(-8px);
+.project-calculator a:hover,
+.project-currency a:hover {
+  color: #ff6200;
+}
+
+.project-calculator .app-image,
+.project-currency .app-image,
+.project-calculator .app-gif,
+.project-currency .app-gif {
+  box-shadow: 0 10px 30px rgba(255, 150, 0, 0.25);
 }

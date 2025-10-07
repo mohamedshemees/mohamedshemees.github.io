@@ -1,0 +1,53 @@
+body {
+  background: #0e001a;
+  color: #eee;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: #ff4efc;
+}
+
+a {
+  color: #ff93f7;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: radial-gradient(circle at top left, #2b0045, #110017);
+  box-shadow: 0 0 40px rgba(255, 0, 200, 0.1);
+}
+
+.mockup {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.app-image, .app-gif {
+  width: 240px;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.3);
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.app-image:hover, .app-gif:hover {
+  transform: translateY(-6px);
+}
+
+.project-info {
+  flex: 1 1 300px;
+  max-width: 400px;
+}

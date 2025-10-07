@@ -72,3 +72,31 @@ a:hover {
     max-width: 90%;
   }
 }
+.project-calculator {
+  background: linear-gradient(135deg, #ffffff, #fdf1e6);
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.2);
+  color: #222;
+}
+
+.project-calculator h3 {
+  color: #ff8c00;
+}
+
+.project-calculator a {
+  color: #ff6f00;
+}
+
+.project-calculator a:hover {
+  text-decoration: underline;
+  color: #ff4500;
+}
+
+.project-calculator .app-image,
+.project-calculator .app-gif {
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+}
+
+.project-calculator .app-image:hover,
+.project-calculator .app-gif:hover {
+  box-shadow: 0 12px 40px rgba(255, 140, 0, 0.5);
+}

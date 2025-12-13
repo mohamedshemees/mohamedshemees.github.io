@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Shemees - Mobile Developer Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1a202c",
+                        "card-dark": "#1b1f27",
+                        "border-dark": "#282e39"
+                    },
+                    fontFamily: {
+                        "sans": ["Spline Sans", "sans-serif"],
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "2xl": "2.5rem",
+                    },
+                    boxShadow: {
+                        "glow": "0 0 40px -10px rgba(37, 106, 244, 0.4)",
+                        "glow-sm": "0 0 20px -5px rgba(37, 106, 244, 0.3)",
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Spline Sans", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101622;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282e39;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b4354;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- NAVBAR -->
+        <div class="fixed top-6 left-0 w-full z-50 flex justify-center px-4 pointer-events-none">
+            <nav class="pointer-events-auto relative flex items-center justify-between gap-6 rounded-full bg-white/80 dark:bg-[#1b1f27]/80 backdrop-blur-md border border-slate-200 dark:border-[#282e39] py-3 pl-6 pr-3 shadow-lg max-w-4xl w-full">
+                <a class="flex items-center gap-3 hover:opacity-80 transition-opacity" href="#home">
+                    <div class="flex items-center justify-center rounded-full bg-primary/10 text-primary size-8">
+                        <span class="material-symbols-outlined text-[20px]">terminal</span>
+                    </div>
+                    <span class="text-sm font-bold tracking-tight text-slate-900 dark:text-white">Mohamed Shemees</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#projects">Projects</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#about">Stack</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#contact">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                        <a href="assets/resume/Mohamed_Shemees_Mobile_Developer.pdf" download="Mohamed_Shemees_Mobile_Developer.pdf" class="inline-flex items-center justify-center rounded-full bg-primary text-white px-5 py-2.5 text-sm font-bold hover:bg-blue-600 transition-all shadow-glow-sm whitespace-nowrap gap-2">
+                        Resume
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <main class="flex flex-col pt-32 pb-10 px-4 md:px-10 lg:px-40 max-w-[1400px] mx-auto w-full grow gap-24 md:gap-32">
+            
+            <!-- HERO SECTION -->
+            <section class="@container pt-10 scroll-mt-32" id="home">
+                <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="flex flex-col flex-1 gap-8 text-center lg:text-left items-center lg:items-start">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-[-0.03em] text-slate-900 dark:text-white">
+                                Building <span class="text-primary">Scalable</span> Mobile Apps.
+                            </h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
+                                I'm a Mobile Developer specializing in Android and iOS development with a focus on clean architecture, performance optimization, and seamless user experiences.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <a class="group flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-white transition-all hover:scale-105 shadow-glow" href="#projects">
+                                <span>View Work</span>
+                                <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">code</span>
+                            </a>
+                            <a class="flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 bg-transparent px-8 text-base font-bold text-slate-900 dark:text-white transition-all hover:bg-slate-100 dark:hover:bg-slate-800" href="#contact">
+                                Contact Me
+                            </a>
+                        </div>
+<!--  To Uncomment when Shipped! -->
+                        <!-- <div class="flex items-center gap-8 pt-4 opacity-80">
+                            <div class="flex flex-col">
+                                <span class="text-2xl font-bold text-slate-900 dark:text-white">1 +</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Years Exp</span>
+                            </div>
+                            <div class="h-8 w-px bg-slate-300 dark:bg-slate-700"></div>
+                            <div class="flex flex-col">
+                                <span class="text-2xl font-bold text-slate-900 dark:text-white">2 +</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Shipped Apps</span>
+                            </div>
+                            <div class="h-8 w-px bg-slate-300 dark:bg-slate-700"></div>
+                            <div class="flex flex-col">
+                                <span class="text-2xl font-bold text-slate-900 dark:text-white">1.5k+</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Commits</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="flex-1 w-full max-w-[600px] lg:max-w-none relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-tr from-primary to-purple-500 opacity-20 blur-2xl rounded-[3rem]"></div>
+                        <div class="relative w-full aspect-square md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+                            <img src="https:/assets/images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=800&fit=crop" alt="Portfolio" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section class="flex flex-col gap-10 scroll-mt-32" id="about">
+                <div class="flex flex-col md:flex-row gap-8 items-start justify-between">
+                    <div class="flex flex-col gap-4 max-w-xl">
+                        <div class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider">
+                            <span class="w-8 h-px bg-primary"></span>
+                            <span>My Approach</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Engineering with precision.</h2>
+                        <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                            I transform complex requirements into robust, native mobile solutions. My background in computer science allows me to write efficient, maintainable code that powers smooth user interfaces, bridging the gap between design fidelity and technical feasibility.
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2">
+                        <a href="assets/resume/Mohamed_Shemees_Mobile_Developer.pdf" download="Mohamed_Shemees_Mobile_Developer.pdf" class="inline-flex items-center justify-center rounded-full bg-primary text-white px-5 py-2.5 text-sm font-bold hover:bg-blue-600 transition-all shadow-glow-sm whitespace-nowrap gap-2">
+                            <span class="material-symbols-outlined text-[18px]">download</span>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tech Stack</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <img src="assets/images/ic_java.svg" alt="Firebase" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">Java</h3>
+                            </div>
+                        </div>
+                         <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                               <img src="assets/images/xml-svgrepo-com.svg" alt="Xml icon" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">Xml</h3>
+                                <span class="text-slate-500 text-xs"></span>
+                            </div>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <img src="assets/images/ic_kotlin.svg" alt="Kotlin icon" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">Kotlin</h3>
+                                
+                            </div>
+                        </div>
+
+                                        <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <img src="assets/images/ic_compose.png" alt="Compose icon" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">Jetpack Compose</h3>
+                                <span class="text-slate-500 text-xs"></span>
+                            </div>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <img src="assets/images/ic_firebase.svg" alt="Firebase icon" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">Firebase</h3>
+                            </div>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                               <img src="assets/images/ic_supabase.png" alt="Supabase icon" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">Supabase</h3>
+                            </div>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] p-6 items-center hover:border-primary/50 transition-colors shadow-sm">
+                            <div class="size-12 rounded-xl bg-pink-500/10 text-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined">rocket_launch</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <h3 class="text-slate-900 dark:text-white text-base font-bold">CI/CD</h3>
+                                <span class="text-slate-500 text-xs">GitHub Actions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section class="flex flex-col gap-10 scroll-mt-32" id="projects">
+                <div class="flex flex-col gap-4">
+                    <div class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider">
+                        <span class="w-8 h-px bg-primary"></span>
+                        <span>Highlighted Work</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- MENA Project -->
+                    <div class="flex flex-row flex-nowrap items-stretch gap-8 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] overflow-hidden hover:border-primary/50 transition-colors shadow-sm group">
+                        <div class="w-2/5 flex flex-col items-start gap-3">
+                            <div class="hidden sm:block w-full">
+                                <video controls muted playsinline loop class="w-full h-full object-contain rounded-md">
+                                    <source src="assets/images/identity_demo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 p-8 w-3/5">
+                            <div class="w-full flex items-center justify-center">
+                                <img src="assets/images/mena-mobile.png" loading="lazy" alt="MENA Project mockup" class="max-w-[70%] rounded-md object-contain">
+                            </div>
+                            <div class="mt-3 w-full text-left">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">MENA Project (Chat App) — Identity Feature</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mt-1">Identity feature for a cross-platform chat app.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap pt-2">
+                                <a href="https://github.com/TheChance101/MENA-mobile" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0f1724] text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-primary hover:text-white transition-colors">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aflami -->
+                    <div class="flex flex-row flex-nowrap items-stretch gap-8 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] overflow-hidden hover:border-primary/50 transition-colors shadow-sm group">
+                        <div class="w-2/5 flex flex-col items-start gap-3">
+                            <div class="hidden sm:block w-full">
+                                <video controls muted playsinline loop class="w-full h-full object-contain rounded-md">
+                                    <source src="assets/images/aflami_demo.mp4" type="video/mp4">
+                                    <!-- fallback image handled below -->
+                                </video>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 p-8 w-3/5">
+                            <div class="w-full flex items-center justify-center">
+                                <img src="assets/images/aflami_mock.png" alt="Aflami mockup" class="max-w-[70%] rounded-md object-contain">
+                            </div>
+                            <div class="mt-3 w-full text-left">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Aflami — Movies Discovery App</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mt-1">Movies discovery app with smart search and pagination.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap pt-2">
+                                <a href="https://github.com/mohamedshemees/Aflami" data-github="Aflami" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0f1724] text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-primary hover:text-white transition-colors">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MyWeatherApp -->
+                    <div class="flex flex-row flex-nowrap items-stretch gap-8 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] overflow-hidden hover:border-primary/50 transition-colors shadow-sm group">
+                        <div class="w-2/5 flex flex-col items-start gap-3">
+                            <div class="hidden sm:block w-full">
+                                <video controls muted playsinline loop class="w-full h-full object-contain rounded-md">
+                                    <source src="assets/images/weather_demo.webm" type="video/webm">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 p-8 w-3/5">
+                            <div class="w-full flex items-center justify-center">
+                                <img src="assets/images/weather_app.png" alt="Weather mockup" class="max-w-[70%] rounded-md object-contain">
+                            </div>
+                            <div class="mt-3 w-full text-left">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">MyWeatherApp — Weather Forecast App</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mt-1">Reactive weather app with live updates and Compose UI.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap pt-2">
+                                <a href="https://github.com/mohamedshemees/MyWeatherApp" data-github="MyWeatherApp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0f1724] text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-primary hover:text-white transition-colors">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ShopSurf -->
+                    <div class="flex flex-row flex-nowrap items-stretch gap-8 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] overflow-hidden hover:border-primary/50 transition-colors shadow-sm group">
+                        <div class="w-2/5 flex flex-col items-start gap-3">
+                            <div class="w-full aspect-[16/9] overflow-hidden rounded-l-2xl min-w-[240px] flex items-center justify-center">
+                                <img src="assets/images/e-commerce_mock.png" loading="lazy" alt="ShopSurf eCommerce mockup" onerror="this.onerror=null;this.src='assets/images/placeholder.svg'" class="w-full h-full object-contain rounded-md max-w-[80%] mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 p-8 w-3/5">
+                            <div class="w-full flex items-center justify-center">
+                                <img src="assets/images/e-commerce_mock.png" loading="lazy" alt="ShopSurf eCommerce mockup" onerror="this.onerror=null;this.src='assets/images/placeholder.svg'" class="max-w-[70%] rounded-md object-contain">
+                            </div>
+                            <div class="mt-3 w-full text-left">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">ShopSurf — eCommerce App</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mt-1">eCommerce app with polished browsing and quick checkout.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap pt-2">
+                                <a href="https://github.com/mohamedshemees/ShopSurf" data-github="ShopSurf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0f1724] text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-primary hover:text-white transition-colors">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CurrencyX -->
+                    <div class="flex flex-row flex-nowrap items-stretch gap-8 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] overflow-hidden hover:border-primary/50 transition-colors shadow-sm group">
+                        <div class="w-2/5 flex flex-col items-start gap-3">
+                            <div class="hidden sm:block w-full">
+                                <video controls muted playsinline loop class="w-full h-full object-contain rounded-md">
+                                    <source src="assets/images/currency_demo.webm" type="video/webm">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 p-8 w-3/5">
+                            <div class="w-full flex items-center justify-center">
+                                <img src="assets/images/currency_mock.png" alt="Currency mockup" class="max-w-[70%] rounded-md object-contain">
+                            </div>
+                            <div class="mt-3 w-full text-left">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">CurrencyX — Real-Time Currency Tracker</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mt-1">Real-time currency tracker with live exchange updates.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap pt-2">
+                                <a href="https://github.com/mohamedshemees/CurrencyX" data-github="CurrencyX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0f1724] text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-primary hover:text-white transition-colors">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tasty -->
+                    <div class="flex flex-row flex-nowrap items-stretch gap-8 rounded-2xl border border-slate-200 dark:border-[#3b4354] bg-white dark:bg-[#1b1f27] overflow-hidden hover:border-primary/50 transition-colors shadow-sm group">
+                        <div class="w-2/5 flex flex-col items-start gap-3">
+                            <div class="hidden sm:block w-full">
+                                <video controls muted playsinline loop class="w-full h-full object-contain rounded-md">
+                                    <source src="assets/images/mealz_demo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 p-8 w-3/5">
+                            <div class="w-full flex items-center justify-center">
+                                <img src="assets/images/mealz_mock_1.png" alt="Mealz mockup" class="max-w-[70%] rounded-md object-contain">
+                            </div>
+                            <div class="mt-2 hidden sm:flex gap-2 w-full justify-center">
+                                <img src="assets/images/mealz_mock_1.png" alt="Mealz mockup 1" class="w-1/2 rounded-md object-contain">
+                                <img src="assets/images/mealz_mock_2.png" alt="Mealz mockup 2" class="w-1/2 rounded-md object-contain">
+                            </div>
+                            <div class="mt-3 w-full text-left">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tasty — Food Recipe App</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mt-1">Recipe app with offline support and efficient caching.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap pt-2">
+                                <a href="https://github.com/mohamedshemees/tasty-food-app" data-github="tasty-food-app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0f1724] text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-primary hover:text-white transition-colors">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="flex flex-col gap-12 border-t border-slate-200 dark:border-[#282e39] pt-20 mt-10 text-center @container scroll-mt-20 px-4 py-10" id="contact">
+            <div class="flex flex-col items-center gap-6">
+                <div class="inline-flex items-center justify-center size-16 rounded-2xl bg-primary/10 text-primary mb-2">
+                    <span class="material-symbols-outlined text-3xl">mail</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Let's build together</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-lg max-w-lg leading-relaxed">
+                    Currently available for freelance development projects and open to full-time engineering roles. Drop a line and let's ship something amazing.
+                </p>
+                <a class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors underline decoration-2 decoration-primary/30 underline-offset-4 hover:decoration-primary break-all" href="mailto:mohamedessampd@gmail.com">
+                    mohamedessampd@gmail.com
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-8 items-center pb-6 w-full">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a class="size-14 rounded-full bg-slate-100 dark:bg-[#1b1f27] border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary hover:border-primary hover:text-white transition-all hover:-translate-y-1 shadow-sm" href="https://github.com/mohamedshemees" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <!-- GitHub SVG -->
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.28 3.438 9.75 8.205 11.325.6.113.82-.263.82-.583 0-.288-.01-1.05-.015-2.06-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.107-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.526.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0 1 12 6.845c1.02.004 2.045.138 3.003.405 2.29-1.552 3.296-1.23 3.296-1.23.656 1.65.245 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.624-5.476 5.92.43.372.823 1.103.823 2.222 0 1.605-.015 2.896-.015 3.286 0 .322.216.703.825.583C20.565 22.247 24 17.78 24 12.5 24 5.87 18.627.5 12 .5z"/></svg>
+                    </a>
+                    <a class="size-14 rounded-full bg-slate-100 dark:bg-[#1b1f27] border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary hover:border-primary hover:text-white transition-all hover:-translate-y-1 shadow-sm" href="https://www.linkedin.com/in/mohamedshemees" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <!-- LinkedIn SVG -->
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zM8 19h-3v-9h3v9zM6.5 8.3c-.97 0-1.8-.79-1.8-1.8S5.53 4.7 6.5 4.7s1.8.79 1.8 1.8-0.83 1.8-1.8 1.8zM20 19h-3v-4.5c0-1.07-.02-2.45-1.5-2.45-1.5 0-1.73 1.17-1.73 2.37V19h-3v-9h2.88v1.22h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59V19z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
